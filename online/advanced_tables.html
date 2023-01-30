@@ -1,0 +1,1360 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<!-- Mirrored from demo.lorvent.com/admire1_fixed_menu_header/advanced_tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Jan 2017 00:13:08 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Tables | Admire</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/logo1.ico"/>
+    <!-- global styles-->
+    <link type="text/css" rel="stylesheet" href="css/components.css"/>
+    <link type="text/css" rel="stylesheet" href="css/custom.css"/>
+    <!--end of global styles-->
+    <!--plugin styles-->
+    <link type="text/css" rel="stylesheet" href="vendors/select2/css/select2.min.css"/>
+    <link type="text/css" rel="stylesheet" href="vendors/datatables/css/dataTables.bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/pages/dataTables.bootstrap.css"/>
+    <!-- end of plugin styles -->
+    <!--Page level styles-->
+    <link type="text/css" rel="stylesheet" href="css/pages/tables.css"/>
+    <link type="text/css" rel="stylesheet" href="#" id="skin_change"/>
+    <!--End of page level styles-->
+</head>
+
+<body class="fixedMenu_header">
+<div class="preloader" style=" position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  backface-visibility: hidden;
+  background: #ffffff;">
+    <div class="preloader_img" style="width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 48%;
+  top: 48%;
+  background-position: center;
+z-index: 999999">
+        <img src="img/loader.gif" style=" width: 40px;" alt="loading...">
+    </div>
+</div>
+<div class="bg-dark" id="wrap">
+    <div id="top" class="fixed">
+        <!-- .navbar -->
+        <nav class="navbar navbar-static-top">
+            <div class="container-fluid">
+                <a class="navbar-brand text-xs-center" href="index.html">
+                    <h4 class="text-white"><img src="img/logow.png" class="admin_img" alt="logo"> ADMIRE ADMIN</h4>
+                </a>
+                <div class="menu">
+                    <span class="toggle-left" id="menu-toggle">
+                        <i class="fa fa-bars text-white"></i>
+                    </span>
+                </div>
+
+                <!-- Toggle Button -->
+                <div class="text-xs-right xs_menu">
+                    <button class="navbar-toggler hidden-xs-up" type="button" data-toggle="collapse" data-target="#nav-content">
+                        ☰
+                    </button>
+                </div>
+                <!-- Nav Content -->
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="topnav dropdown-menu-right float-xs-right">
+                    <div class="btn-group">
+                        <div class="notifications no-bg">
+                            <a class="btn btn-default btn-sm messages" data-toggle="dropdown"> <i class="fa fa-envelope fa-1x text-white"></i>
+                                <!--<span class="bg-warning message_tags">4</span>-->
+                                <span class="tag tag-warning">8</span>
+                            </a>
+                            <div class="dropdown-menu drop_box_align" role="menu">
+                                <div class="popover-title">You have 8 Messages</div>
+                                <div id="messages">
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/5.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data"> <strong>hally</strong>
+                                            sent you an image.
+                                            <br>
+                                            <small>add to timeline</small>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/8.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data"> <strong>Meri</strong>
+                                            invitation for party.
+                                            <br>
+                                            <small>add to timeline</small>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/7.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data">
+                                            <strong>Remo</strong>
+                                            meeting details .
+                                            <br>
+                                            <small>add to timeline</small>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/6.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data">
+                                            <strong>David</strong>
+                                            upcoming events list.
+                                            <br>
+                                            <small>add to timeline</small>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/5.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data"> <strong>hally</strong>
+                                            sent you an image.
+                                            <br>
+                                            <small>add to timeline</small>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/8.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data"> <strong>Meri</strong>
+                                            invitation for party.
+                                            <br>
+                                            <small>add to timeline</small>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/7.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data">
+                                            <strong>Remo</strong>
+                                            meeting details .
+                                            <br>
+                                            <small>add to timeline</small>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/6.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data">
+                                            <strong>David</strong>
+                                            upcoming events list.
+                                            <br>
+                                            <small>add to timeline</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="popover-footer">
+                                    <a href="mail_inbox.html">Inbox</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <div class="notifications messages no-bg">
+                            <a class="btn btn-default btn-sm" data-toggle="dropdown"> <i class="fa fa-bell text-white"></i>
+                                <!--<span class="bg-danger notification_tags">4</span>-->
+                                <span class="tag tag-danger">9</span>
+                            </a>
+                            <div class="dropdown-menu drop_box_align" role="menu">
+                                <div class="popover-title">You have 9 Notifications</div>
+                                <div id="notifications">
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/1.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data">
+                                            <i class="fa fa-clock-o"></i>
+                                            <strong>Remo</strong>
+                                            sent you an image
+                                            <br>
+                                            <small class="primary_txt">just now.</small>
+                                            <br></div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/2.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data">
+                                            <i class="fa fa-clock-o"></i>
+                                            <strong>clay</strong>
+                                            business propasals
+                                            <br>
+                                            <small class="primary_txt">20min Back.</small>
+                                            <br></div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/3.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data">
+                                            <i class="fa fa-clock-o"></i>
+                                            <strong>John</strong>
+                                            meeting at Ritz
+                                            <br>
+                                            <small class="primary_txt">2hrs Back.</small>
+                                            <br></div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/6.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data">
+                                            <i class="fa fa-clock-o"></i>
+                                            <strong>Luicy</strong>
+                                            Request Invitation
+                                            <br>
+                                            <small class="primary_txt">Yesterday.</small>
+                                            <br></div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/1.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data">
+                                            <i class="fa fa-clock-o"></i>
+                                            <strong>Remo</strong>
+                                            sent you an image
+                                            <br>
+                                            <small class="primary_txt">just now.</small>
+                                            <br></div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/2.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data">
+                                            <i class="fa fa-clock-o"></i>
+                                            <strong>clay</strong>
+                                            business propasals
+                                            <br>
+                                            <small class="primary_txt">20min Back.</small>
+                                            <br></div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/3.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data">
+                                            <i class="fa fa-clock-o"></i>
+                                            <strong>John</strong>
+                                            meeting at Ritz
+                                            <br>
+                                            <small class="primary_txt">2hrs Back.</small>
+                                            <br></div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/6.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data">
+                                            <i class="fa fa-clock-o"></i>
+                                            <strong>Luicy</strong>
+                                            Request Invitation
+                                            <br>
+                                            <small class="primary_txt">Yesterday.</small>
+                                            <br></div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="col-xs-2">
+                                            <img src="img/mailbox_imgs/1.jpg" class="message-img avatar" alt="avatar1"></div>
+                                        <div class="col-xs-10 message-data">
+                                            <i class="fa fa-clock-o"></i>
+                                            <strong>Remo</strong>
+                                            sent you an image
+                                            <br>
+                                            <small class="primary_txt">just now.</small>
+                                            <br></div>
+                                    </div>
+                                </div>
+
+                                <div class="popover-footer">
+                                    <a href="#">View All</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-default btn-sm messages toggle-right">
+                            &nbsp;
+                            <i class="fa fa-cog text-white"></i>
+                            &nbsp;
+                        </a>
+                    </div>
+                    <div class="btn-group">
+                        <div class="user-settings no-bg">
+                            <button type="button" class="btn btn-default no-bg micheal_btn" data-toggle="dropdown">
+                                <img src="img/admin.jpg" class="admin_img2 rounded-circle avatar-img" alt="avatar"> <strong>Micheal</strong>
+                                <span class="fa fa-sort-down white_bg"></span>
+                            </button>
+                            <div class="dropdown-menu admire_admin">
+                                <a class="dropdown-item title" href="#">
+                                    Admire Admin</a>
+                                <a class="dropdown-item" href="edit_user.html"><i class="fa fa-cogs"></i>
+                                    Account Settings</a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa fa-user"></i>
+                                    User Status
+                                </a>
+                                <a class="dropdown-item" href="mail_inbox.html"><i class="fa fa-envelope"></i>
+                                    Inbox</a>
+
+                                <a class="dropdown-item" href="lockscreen.html"><i class="fa fa-lock"></i>
+                                    Lock Screen</a>
+                                <a class="dropdown-item" href="login.html"><i class="fa fa-sign-out"></i>
+                                    Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse navbar-toggleable-sm col-xl-6 col-lg-6 hidden-md-down float-xl-right  top_menu" id="nav-content">
+                    <ul class="nav navbar-nav top_menubar">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="mail_inbox.html">
+                                <i class="fa fa-inbox"></i> <span class="quick_text">Inbox</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="mail_compose.html">
+                                <i class="fa fa fa-edit"></i> <span class="quick_text">Compose</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="maps.html">
+                                <i class="fa fa-map-marker"></i> <span class="quick_text">Maps</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="gallery.html">
+                                <i class="fa fa-picture-o"></i> <span class="quick_text">Gallery</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- /.container-fluid --> </nav>
+        <!-- /.navbar -->
+        <!-- /.head --> </div>
+    <!-- /#top -->
+    <div class="wrapper">
+        <div id="left" class="fixed">
+            <div class="menu_sction menu_scroll">
+                <div class="media user-media bg-dark dker">
+                    <div class="user-media-toggleHover">
+                        <span class="fa fa-user"></span>
+                    </div>
+                    <div class="user-wrapper bg-dark">
+                        <a class="user-link" href="#">
+                            <img class="media-object img-thumbnail user-img rounded-circle admin_img3" alt="User Picture" src="img/admin.jpg"><p class="text-white user-info">Welcome Micheal</p></a>
+
+
+
+
+                        <div class="search_bar col-lg-12">
+                            <div class="input-group">
+                                <input type="search" class="form-control" placeholder="search">
+                                <span class="input-group-btn">
+                                <button class="btn without_border" type="button"><span class="fa fa-search" >
+                                </span></button>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- #menu -->
+                <ul id="menu" class="bg-blue dker">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-home"></i>
+                            <span class="link-title">&nbsp;Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-anchor"></i>
+                            <span class="link-title">&nbsp; Components</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="general_components.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; General Components
+                                </a>
+                            </li>
+                            <li>
+                                <a href="transitions.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Transitions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="buttons.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Buttons
+                                </a>
+                            </li>
+                            <li>
+                                <a href="icons.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Icons
+                                </a>
+                            </li>
+                            <li>
+                                <a href="animations.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Animations
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="sliders.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp;  Sliders
+                                </a>
+                            </li>
+                            <li>
+                                <a href="notifications.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Notifications
+                                </a>
+                            </li>
+                            <li>
+                                <a href="p_notify.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; P-Notify
+                                </a>
+                            </li>
+                            <li>
+                                <a href="cropper.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Cropper
+                                </a>
+                            </li>
+                            <li>
+                                <a href="jstree.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Js Tree
+                                </a>
+                            </li>
+                            <li>
+                                <a href="modal.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp;  Modals
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="sortable.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Sortable
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sweet_alert.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Sweet alerts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="grids_layout.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Grid View
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-th-large"></i>
+                            <span class="link-title">&nbsp; Widgets</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="widgets.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Widgets1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="widgets2.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Widgets2
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-pencil"></i>
+                            <span class="link-title">&nbsp; Forms</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="form_elements.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Form Elements
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_layouts.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Form Layouts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_validations.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Form Validations
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_editors.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Form Editors
+                                </a>
+                            </li>
+                            <li>
+                                <a href="radio_checkbox.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Radio and Checkbox
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_wizards.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Wizards
+                                </a>
+                            </li>
+                            <li>
+                                <a href="datetime_picker.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Date Time Picker
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="ratings.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Ratings
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fa fa-th"></i>
+                            <span class="link-title">&nbsp; Tables</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="simple_tables.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Simple Tables
+                                </a>
+                            </li>
+                            <li>
+                                <a href="simple_datatables.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Simple Data Tables
+                                </a>
+                            </li>
+                            <li>
+                                <a href="datatables.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Data Tables
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="advanced_tables.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Advanced Tables
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-bar-chart"></i>
+                            <span class="link-title">&nbsp; Charts</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="charts.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Flot Charts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="advanced_charts.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Advanced Charts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="chartist.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Chartist
+                                </a>
+                            </li>
+                            <li>
+                                <a href="rickshaw.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Rickshaw Charts
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-user"></i>
+                            <span class="link-title">&nbsp; Users</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="users.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; User Grid
+                                </a>
+                            </li>
+                            <li>
+                                <a href="add_user.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Add User
+                                </a>
+                            </li>
+                            <li>
+                                <a href="view_user.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; User Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="delete_user.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Delete User
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="calendar.html">
+                            <i class="fa fa-calendar"></i>
+                            <span class="link-title">&nbsp; Calendar</span>
+                            <span class="tag tag-pill tag-primary float-xs-right calendar_tag">7</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">
+                            <i class="fa fa-picture-o"> </i>
+                            &nbsp; Gallery
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="link-title">&nbsp; Email</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="mail_compose.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Compose
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mail_inbox.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Inbox
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="mail_view.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; View
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mail_sent.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp;  Sent
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mail_spam.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Spam
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="mail_draft.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Draft
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mail_trash.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp;  Trash
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-map-marker"></i>
+                            <span class="link-title">&nbsp; Maps</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="maps.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Google Maps
+                                </a>
+                            </li>
+                            <li>
+                                <a href="jqvmaps.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Vector Maps
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-file"></i>
+                            <span class="link-title">&nbsp; Pages</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="404.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; 404
+                                </a>
+                            </li>
+                            <li>
+                                <a href="500.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; 500
+                                </a>
+                            </li>
+                            <li>
+                                <a href="login.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Login
+                                </a>
+                            </li>
+                            <li>
+                                <a href="register.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Register
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lockscreen.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Lock Screen
+                                </a>
+                            </li>
+                            <li>
+                                <a href="invoice.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Invoice
+                                </a>
+                            </li>
+                            <li>
+                                <a href="blank.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Blank Page
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:;">
+                            <i class="fa fa-th"></i>
+                            <span class="link-title">&nbsp; Layouts</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="boxed.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Boxed Layout
+                                </a>
+                            </li>
+                            <li>
+                                <a href="fixed-header-boxed.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Boxed &amp; Fixed Header
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="fixed-header.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Fixed Header
+                                </a>
+                            </li>
+                            <li>
+                                <a href="fixed-menu-boxed.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Boxed &amp; Fixed Menu
+                                </a>
+                            </li>
+                            <li>
+                                <a href="fixed-menu.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Fixed Menu
+                                </a>
+                            </li>
+                            <li>
+                                <a href="no-header.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; No Header
+                                </a>
+                            </li>
+                            <li>
+                                <a href="no-left-sidebar.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; No Left Sidebar
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-sitemap"></i>
+                            <span class="link-title">&nbsp; Multi Level Menu</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp;Level 1
+                                    <span class="fa arrow"></span>
+                                </a>
+                                <ul class="sub-menu sub-submenu">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-angle-right"></i>
+                                            &nbsp;Level 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-angle-right"></i>
+                                            &nbsp;Level 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-angle-right"></i>
+                                            &nbsp;Level 2
+                                            <span class="fa arrow"></span>
+                                        </a>
+                                        <ul class="sub-menu sub-submenu">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-angle-right"></i>
+                                                    &nbsp;Level 3
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-angle-right"></i>
+                                                    &nbsp;Level 3
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-angle-right"></i>
+                                                    &nbsp;Level 3
+                                                    <span class="fa arrow"></span>
+                                                </a>
+                                                <ul class="sub-menu sub-submenu">
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="fa fa-angle-right"></i>
+                                                            &nbsp;Level 4
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="fa fa-angle-right"></i>
+                                                            &nbsp;Level 4
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="fa fa-angle-right"></i>
+                                                            &nbsp;Level 4
+                                                            <span class="fa arrow"></span>
+                                                        </a>
+                                                        <ul class="sub-menu sub-submenu">
+                                                            <li>
+                                                                <a href="javascript:;">
+                                                                    <i class="fa fa-angle-right"></i>
+                                                                    &nbsp;Level 5
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:;">
+                                                                    <i class="fa fa-angle-right"></i>
+                                                                    &nbsp;Level 5
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:;">
+                                                                    <i class="fa fa-angle-right"></i>
+                                                                    &nbsp;Level 5
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-angle-right"></i>
+                                                    &nbsp;Level 4
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-angle-right"></i>
+                                            &nbsp;Level 2
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp;Level 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp;Level 1
+                                    <span class="fa arrow"></span>
+                                </a>
+                                <ul class="sub-menu sub-submenu">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-angle-right"></i>
+                                            &nbsp;Level 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-angle-right"></i>
+                                            &nbsp;Level 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-angle-right"></i>
+                                            &nbsp;Level 2
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /#menu -->
+            </div>
+        </div>
+        <!-- /#left -->
+        <div id="content" class="bg-container">
+            <header class="head">
+                <div class="main-bar row">
+                    <div class="col-lg-6 col-md-4 col-sm-4">
+                        <h4 class="nav_top_align">
+                            <i class="fa fa-th"></i>
+                            Advanced Tables
+                        </h4>
+                    </div>
+                    <div class="col-lg-6 col-md-8 col-sm-8">
+                        <ol class="breadcrumb float-xs-right nav_breadcrumb_top_align">
+                            <li class="breadcrumb-item">
+                                <a href="index.html">
+                                    <i class="fa fa-home" data-pack="default" data-tags=""></i>
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="#">Tables</a>
+                            </li>
+                            <li class="breadcrumb-item active">Advanced Tables</li>
+                        </ol>
+                    </div>
+                </div>
+            </header>
+            <div class="outer">
+                <div class="inner bg-light lter bg-container">
+                    <!-- editable data  table starts-->
+                    <div class="card">
+                        <div class="card-header bg-white">
+                            <i class="fa fa-table"> </i> Scroll - horizontal and Vertical Scroll Table
+                        </div>
+                        <div class="card-block">
+                            <div class="m-t-35">
+                                <table id="example" class="table display nowrap" >
+                                    <thead>
+                                    <tr>
+                                        <th>First name</th>
+                                        <th>Last name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Age</th>
+                                        <th>Start date</th>
+                                        <th>Salary</th>                                        
+                                        <th>E-mail</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody><tr><td>Aurore</td><td>Balistreri</td><td>Principal Program Administrator</td><td>North Adeline</td><td>46</td><td>1959-8-27</td><td>$9798</td><td>Aurore74@hotmail.com</td></tr><tr><td>Mathilde</td><td>Krajcik</td><td>International Marketing Coordinator</td><td>East Brant</td><td>79</td><td>1988-4-27</td><td>$4184</td><td>Mathilde.Krajcik@gmail.com</td></tr><tr><td>Heaven</td><td>Blanda</td><td>Investor Integration Agent</td><td>South Sylvester</td><td>44</td><td>1955-2-10</td><td>$5880</td><td>Heaven.Blanda@yahoo.com</td></tr><tr><td>Madison</td><td>Hamill</td><td>Forward Creative Strategist</td><td>Kieranchester</td><td>73</td><td>1982-4-12</td><td>$2153</td><td>Madison82@hotmail.com</td></tr><tr><td>Noble</td><td>Bashirian</td><td>Customer Assurance Strategist</td><td>Borerton</td><td>58</td><td>1974-6-30</td><td>$4664</td><td>Noble52@hotmail.com</td></tr><tr><td>Lance</td><td>Toy</td><td>Internal Configuration Consultant</td><td>Boscobury</td><td>20</td><td>1959-5-5</td><td>$4819</td><td>Lance.Toy@hotmail.com</td></tr><tr><td>Keaton</td><td>Jast</td><td>Forward Functionality Supervisor</td><td>Marcland</td><td>70</td><td>1951-1-15</td><td>$5589</td><td>Keaton_Jast99@gmail.com</td></tr><tr><td>Cyrus</td><td>Wiza</td><td>Investor Identity Executive</td><td>East Anya</td><td>23</td><td>1974-2-8</td><td>$9035</td><td>Cyrus_Wiza@yahoo.com</td></tr><tr><td>Alysha</td><td>Ward</td><td>Chief Data Producer</td><td>Pfannerstillfort</td><td>27</td><td>1965-6-4</td><td>$7087</td><td>Alysha35@hotmail.com</td></tr><tr><td>Lyda</td><td>Rippin</td><td>Legacy Web Technician</td><td>North Mona</td><td>71</td><td>1977-4-7</td><td>$3310</td><td>Lyda.Rippin@yahoo.com</td></tr><tr><td>Layne</td><td>Daugherty</td><td>Forward Solutions Architect</td><td>Mariamview</td><td>78</td><td>1945-12-16</td><td>$3329</td><td>Layne.Daugherty63@yahoo.com</td></tr><tr><td>Claudie</td><td>Kuhlman</td><td>Dynamic Accounts Producer</td><td>East Lavernachester</td><td>69</td><td>1947-8-2</td><td>$6123</td><td>Claudie.Kuhlman55@hotmail.com</td></tr><tr><td>Kelley</td><td>Raynor</td><td>Legacy Solutions Producer</td><td>Goodwinview</td><td>29</td><td>1962-3-14</td><td>$9360</td><td>Kelley.Raynor@hotmail.com</td></tr><tr><td>Pierre</td><td>Anderson</td><td>Central Factors Officer</td><td>Lake Vidal</td><td>45</td><td>1980-10-28</td><td>$3000</td><td>Pierre31@hotmail.com</td></tr><tr><td>Carmella</td><td>Frami</td><td>Human Optimization Director</td><td>Denesikstad</td><td>57</td><td>1975-1-9</td><td>$3485</td><td>Carmella.Frami@hotmail.com</td></tr><tr><td>Rollin</td><td>Lehner</td><td>Human Tactics Representative</td><td>Kochfort</td><td>65</td><td>1948-12-13</td><td>$4009</td><td>Rollin_Lehner17@hotmail.com</td></tr><tr><td>Amira</td><td>Veum</td><td>Future Response Assistant</td><td>South Zack</td><td>56</td><td>1956-7-19</td><td>$8030</td><td>Amira66@yahoo.com</td></tr><tr><td>Shany</td><td>Kilback</td><td>National Marketing Representative</td><td>East Russ</td><td>35</td><td>1981-7-27</td><td>$6382</td><td>Shany_Kilback@gmail.com</td></tr><tr><td>Reva</td><td>Hudson</td><td>Product Applications Associate</td><td>Lake Montana</td><td>36</td><td>1978-3-1</td><td>$8087</td><td>Reva_Hudson12@yahoo.com</td></tr><tr><td>Henri</td><td>Kirlin</td><td>Product Research Orchestrator</td><td>Erikfurt</td><td>70</td><td>1979-7-28</td><td>$8549</td><td>Henri91@yahoo.com</td></tr><tr><td>Oren</td><td>Haley</td><td>Central Integration Facilitator</td><td>New Maraside</td><td>31</td><td>1984-10-21</td><td>$3844</td><td>Oren_Haley@gmail.com</td></tr><tr><td>Teresa</td><td>Beier</td><td>Legacy Group Representative</td><td>Wildermanland</td><td>36</td><td>1975-12-13</td><td>$7969</td><td>Teresa52@hotmail.com</td></tr><tr><td>Cynthia</td><td>Towne</td><td>Human Infrastructure Administrator</td><td>Walkerside</td><td>29</td><td>1959-11-3</td><td>$6543</td><td>Cynthia_Towne38@gmail.com</td></tr><tr><td>Thurman</td><td>Cronin</td><td>Direct Operations Technician</td><td>Jakubowskiville</td><td>72</td><td>1975-4-24</td><td>$4273</td><td>Thurman6@yahoo.com</td></tr><tr><td>Quinten</td><td>Schroeder</td><td>Dynamic Security Representative</td><td>Skilesmouth</td><td>55</td><td>1984-9-17</td><td>$6341</td><td>Quinten.Schroeder@hotmail.com</td></tr><tr><td>Crawford</td><td>Collier</td><td>Global Tactics Architect</td><td>West Bernardmouth</td><td>80</td><td>1973-11-23</td><td>$5693</td><td>Crawford_Collier@gmail.com</td></tr><tr><td>Dion</td><td>Reinger</td><td>Customer Accountability Producer</td><td>East Tristianport</td><td>68</td><td>1984-12-19</td><td>$4319</td><td>Dion.Reinger19@yahoo.com</td></tr><tr><td>Winifred</td><td>Bartoletti</td><td>District Applications Liason</td><td>Sipeschester</td><td>74</td><td>1987-12-9</td><td>$5693</td><td>Winifred95@hotmail.com</td></tr><tr><td>Newton</td><td>Monahan</td><td>Direct Group Engineer</td><td>East Tyler</td><td>39</td><td>1976-10-10</td><td>$2641</td><td>Newton_Monahan@hotmail.com</td></tr><tr><td>Jalyn</td><td>Gleason</td><td>Internal Group Facilitator</td><td>West Chyna</td><td>44</td><td>1961-5-7</td><td>$3987</td><td>Jalyn.Gleason@gmail.com</td></tr><tr><td>Fabiola</td><td>Langosh</td><td>Product Marketing Director</td><td>Mariloufurt</td><td>37</td><td>1945-6-14</td><td>$3488</td><td>Fabiola65@hotmail.com</td></tr><tr><td>Elizabeth</td><td>Torphy</td><td>Global Configuration Developer</td><td>South Vincenthaven</td><td>58</td><td>1962-10-9</td><td>$2964</td><td>Elizabeth.Torphy62@gmail.com</td></tr><tr><td>Annetta</td><td>Mohr</td><td>Chief Web Analyst</td><td>South Art</td><td>59</td><td>1943-10-6</td><td>$7946</td><td>Annetta23@yahoo.com</td></tr><tr><td>Janie</td><td>Moore</td><td>Global Mobility Strategist</td><td>Hansenfurt</td><td>44</td><td>1974-8-31</td><td>$4049</td><td>Janie.Moore@gmail.com</td></tr><tr><td>Jules</td><td>Quitzon</td><td>Corporate Interactions Designer</td><td>Rebecashire</td><td>29</td><td>1986-12-6</td><td>$6889</td><td>Jules_Quitzon@gmail.com</td></tr><tr><td>Kenyon</td><td>Stehr</td><td>International Mobility Analyst</td><td>East Olenburgh</td><td>53</td><td>1987-2-4</td><td>$9948</td><td>Kenyon_Stehr@yahoo.com</td></tr><tr><td>Peggie</td><td>Nicolas</td><td>Chief Paradigm Liason</td><td>Bodestad</td><td>41</td><td>1943-11-13</td><td>$9776</td><td>Peggie_Nicolas@hotmail.com</td></tr><tr><td>Virginie</td><td>Davis</td><td>Dynamic Communications Agent</td><td>New Nathen</td><td>66</td><td>1989-12-11</td><td>$6569</td><td>Virginie18@gmail.com</td></tr><tr><td>Anibal</td><td>Simonis</td><td>Customer Operations Architect</td><td>Celestinoside</td><td>53</td><td>1974-7-29</td><td>$8417</td><td>Anibal68@yahoo.com</td></tr><tr><td>Clotilde</td><td>Jenkins</td><td>Central Operations Administrator</td><td>West Rafaelashire</td><td>46</td><td>1987-8-25</td><td>$2608</td><td>Clotilde.Jenkins12@hotmail.com</td></tr><tr><td>Brando</td><td>Gusikowski</td><td>Internal Accountability Consultant</td><td>Gottliebville</td><td>52</td><td>1987-3-3</td><td>$9906</td><td>Brando.Gusikowski@gmail.com</td></tr><tr><td>Loyal</td><td>Powlowski</td><td>Global Markets Strategist</td><td>Lexieview</td><td>41</td><td>1986-8-16</td><td>$9772</td><td>Loyal.Powlowski@hotmail.com</td></tr><tr><td>Deondre</td><td>Romaguera</td><td>Customer Intranet Consultant</td><td>Nicolashaven</td><td>29</td><td>1973-11-8</td><td>$6074</td><td>Deondre_Romaguera80@hotmail.com</td></tr><tr><td>Sonia</td><td>Reichel</td><td>Investor Creative Specialist</td><td>North Antwan</td><td>33</td><td>1952-2-15</td><td>$7957</td><td>Sonia_Reichel@yahoo.com</td></tr><tr><td>Santiago</td><td>Wintheiser</td><td>Legacy Tactics Strategist</td><td>Nathenmouth</td><td>41</td><td>1946-11-4</td><td>$5636</td><td>Santiago_Wintheiser82@gmail.com</td></tr><tr><td>Kieran</td><td>Gerlach</td><td>Lead Data Agent</td><td>Spinkaview</td><td>50</td><td>1964-10-21</td><td>$4536</td><td>Kieran_Gerlach@yahoo.com</td></tr><tr><td>Andy</td><td>Morissette</td><td>Principal Implementation Director</td><td>Noemiview</td><td>51</td><td>1955-4-16</td><td>$6880</td><td>Andy16@hotmail.com</td></tr><tr><td>Titus</td><td>Breitenberg</td><td>Dynamic Functionality Producer</td><td>Rueckertown</td><td>79</td><td>1943-2-27</td><td>$8458</td><td>Titus.Breitenberg@gmail.com</td></tr><tr><td>Willie</td><td>Kub</td><td>Global Division Assistant</td><td>Baileystad</td><td>71</td><td>1969-9-11</td><td>$5580</td><td>Willie.Kub@hotmail.com</td></tr><tr><td>Geovanny</td><td>Reichel</td><td>Investor Research Strategist</td><td>South Jessika</td><td>70</td><td>1977-5-2</td><td>$7192</td><td>Geovanny.Reichel54@gmail.com</td></tr><tr><td>Madilyn</td><td>Daugherty</td><td>Dynamic Tactics Associate</td><td>East Rubenburgh</td><td>47</td><td>1962-6-7</td><td>$2430</td><td>Madilyn74@hotmail.com</td></tr><tr><td>Julio</td><td>Borer</td><td>Senior Paradigm Specialist</td><td>Philipborough</td><td>39</td><td>1946-3-14</td><td>$5156</td><td>Julio56@yahoo.com</td></tr><tr><td>Kaylin</td><td>Collins</td><td>Investor Tactics Developer</td><td>Corkerytown</td><td>55</td><td>1987-8-2</td><td>$5831</td><td>Kaylin81@gmail.com</td></tr><tr><td>Weston</td><td>Rohan</td><td>Future Creative Supervisor</td><td>Kianashire</td><td>27</td><td>1982-10-29</td><td>$5622</td><td>Weston.Rohan22@hotmail.com</td></tr><tr><td>Lew</td><td>Haley</td><td>Customer Mobility Analyst</td><td>Vadamouth</td><td>43</td><td>1943-6-22</td><td>$8120</td><td>Lew.Haley4@gmail.com</td></tr><tr><td>Albina</td><td>Lindgren</td><td>Investor Marketing Agent</td><td>Lake Wadeborough</td><td>73</td><td>1959-8-23</td><td>$8009</td><td>Albina.Lindgren@yahoo.com</td></tr><tr><td>Christopher</td><td>Corkery</td><td>Central Infrastructure Technician</td><td>Weimannview</td><td>57</td><td>1988-3-31</td><td>$6023</td><td>Christopher_Corkery@hotmail.com</td></tr></tbody>                                
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card m-t-35">
+                        <div class="card-header bg-white">
+                            <i class="fa fa-table"> </i> Advanced Table
+                        </div>
+                        <div class="card-block">
+                            <div class="m-t-35">
+                                <button id="del_button" class="btn btn-primary"> Delete Selected Row </button>
+                                <div class="m-t-25">
+                                    <table id="example_demo" class="table table-hover table-bordered " >
+                                        <thead>
+                                        <tr>
+                                            <th>First name</th>
+                                            <th>Last name</th>
+                                            <th class="hidden-xs">User name</th>
+                                            <th class="hidden-xs">Contact</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody><tr><td>Barbara</td><td>Oberbrunner</td><td>Barbara.Oberbrunner72</td><td>340-008-0893</td></tr><tr><td>Cordelia</td><td>Rath</td><td>Cordelia_Rath61</td><td>325-249-0692</td></tr><tr><td>Enola</td><td>Strosin</td><td>Enola_Strosin50</td><td>602-588-8702</td></tr><tr><td>Wilber</td><td>Stiedemann</td><td>Wilber76</td><td>702-043-4738</td></tr><tr><td>Katrina</td><td>Connelly</td><td>Katrina90</td><td>085-905-5278</td></tr><tr><td>Carlos</td><td>Hintz</td><td>Carlos.Hintz12</td><td>702-665-5965</td></tr><tr><td>Anabel</td><td>Brekke</td><td>Anabel_Brekke</td><td>161-155-7782</td></tr><tr><td>Rocky</td><td>Rosenbaum</td><td>Rocky.Rosenbaum</td><td>886-620-3788</td></tr><tr><td>Jordi</td><td>Willms</td><td>Jordi_Willms81</td><td>906-605-0838</td></tr><tr><td>Corrine</td><td>Spinka</td><td>Corrine_Spinka65</td><td>602-085-6078</td></tr><tr><td>Ian</td><td>Gislason</td><td>Ian.Gislason</td><td>544-694-5290</td></tr><tr><td>Stephanie</td><td>Effertz</td><td>Stephanie_Effertz</td><td>566-096-4358</td></tr><tr><td>Lucious</td><td>Bosco</td><td>Lucious5</td><td>112-560-2158</td></tr><tr><td>Carmine</td><td>Halvorson</td><td>Carmine_Halvorson</td><td>488-092-0985</td></tr><tr><td>Norene</td><td>Schimmel</td><td>Norene3</td><td>362-894-5328</td></tr><tr><td>Percy</td><td>Monahan</td><td>Percy.Monahan90</td><td>908-050-3573</td></tr><tr><td>Dedric</td><td>Rempel</td><td>Dedric_Rempel</td><td>796-271-0462</td></tr><tr><td>Bella</td><td>Bosco</td><td>Bella69</td><td>267-055-6396</td></tr><tr><td>Bianka</td><td>Wyman</td><td>Bianka_Wyman</td><td>729-489-8442</td></tr><tr><td>Anna</td><td>Weber</td><td>Anna90</td><td>873-697-2642</td></tr><tr><td>Jeff</td><td>Kuvalis</td><td>Jeff_Kuvalis29</td><td>959-581-6982</td></tr><tr><td>Otha</td><td>Hilpert</td><td>Otha.Hilpert</td><td>143-819-6455</td></tr><tr><td>Toni</td><td>Weissnat</td><td>Toni.Weissnat22</td><td>664-461-1470</td></tr><tr><td>Mina</td><td>Langworth</td><td>Mina.Langworth81</td><td>633-824-6834</td></tr><tr><td>Florencio</td><td>Feeney</td><td>Florencio78</td><td>687-783-3131</td></tr><tr><td>Rita</td><td>Littel</td><td>Rita.Littel86</td><td>365-618-2849</td></tr><tr><td>Zechariah</td><td>Mitchell</td><td>Zechariah_Mitchell</td><td>893-363-0874</td></tr><tr><td>Layne</td><td>Heidenreich</td><td>Layne_Heidenreich81</td><td>202-900-7622</td></tr><tr><td>Aaron</td><td>Stokes</td><td>Aaron.Stokes</td><td>878-820-5450</td></tr><tr><td>Salvatore</td><td>Koch</td><td>Salvatore.Koch</td><td>179-711-7250</td></tr><tr><td>Virgie</td><td>Hickle</td><td>Virgie_Hickle75</td><td>882-362-1743</td></tr><tr><td>Nova</td><td>Littel</td><td>Nova.Littel</td><td>508-815-2782</td></tr><tr><td>Adolfo</td><td>Legros</td><td>Adolfo.Legros9</td><td>564-385-7353</td></tr><tr><td>Emile</td><td>Lowe</td><td>Emile_Lowe88</td><td>954-777-0692</td></tr><tr><td>Alvah</td><td>Dickens</td><td>Alvah_Dickens</td><td>778-912-8090</td></tr><tr><td>Clyde</td><td>Prosacco</td><td>Clyde.Prosacco1</td><td>491-712-5097</td></tr><tr><td>Lon</td><td>Glover</td><td>Lon32</td><td>782-816-7723</td></tr><tr><td>Drake</td><td>Heidenreich</td><td>Drake.Heidenreich78</td><td>894-429-8713</td></tr><tr><td>Mikayla</td><td>Turner</td><td>Mikayla_Turner47</td><td>389-728-0717</td></tr><tr><td>Javier</td><td>Fahey</td><td>Javier_Fahey44</td><td>129-692-7475</td></tr><tr><td>Kenya</td><td>Mosciski</td><td>Kenya.Mosciski</td><td>710-853-7377</td></tr><tr><td>Ned</td><td>Marvin</td><td>Ned75</td><td>600-091-2968</td></tr><tr><td>Rylee</td><td>Waters</td><td>Rylee75</td><td>954-415-9934</td></tr><tr><td>Angelina</td><td>Torphy</td><td>Angelina48</td><td>775-638-3448</td></tr><tr><td>Carolyn</td><td>Dach</td><td>Carolyn56</td><td>543-804-3144</td></tr><tr><td>Antonia</td><td>Hackett</td><td>Antonia.Hackett</td><td>387-732-5894</td></tr><tr><td>Nedra</td><td>Morissette</td><td>Nedra58</td><td>969-984-2709</td></tr><tr><td>Nolan</td><td>Krajcik</td><td>Nolan.Krajcik</td><td>577-227-9596</td></tr><tr><td>Jeffery</td><td>O'Hara</td><td>Jeffery_OHara</td><td>534-603-6200</td></tr><tr><td>Evangeline</td><td>Goodwin</td><td>Evangeline_Goodwin</td><td>791-355-8987</td></tr><tr><td>Dena</td><td>Medhurst</td><td>Dena.Medhurst</td><td>057-376-3245</td></tr><tr><td>Kyra</td><td>Haley</td><td>Kyra59</td><td>419-651-4827</td></tr><tr><td>Aditya</td><td>Borer</td><td>Aditya_Borer</td><td>167-962-4965</td></tr><tr><td>Kylee</td><td>Swift</td><td>Kylee37</td><td>083-414-6210</td></tr><tr><td>Elenora</td><td>Stroman</td><td>Elenora.Stroman87</td><td>140-966-9576</td></tr><tr><td>Elmo</td><td>Kassulke</td><td>Elmo.Kassulke</td><td>440-656-9499</td></tr><tr><td>Hugh</td><td>Miller</td><td>Hugh.Miller13</td><td>451-182-1112</td></tr></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card m-t-35">
+                        <div class="card-header bg-white">
+                            <i class="fa fa-table"></i>
+                            Responsive Flip Scroll Tables
+                        </div>
+                        <div class="card-block flip-scroll">
+                            <div class="m-t-35">
+                                <table class="table table-bordered table-striped flip-content">
+                                    <thead class="flip-content">
+                                    <tr>
+                                        <th>Code</th>
+                                        <th>Company</th>
+                                        <th class="numeric">Price</th>
+                                        <th class="numeric">Change</th>
+                                        <th class="numeric">High</th>
+                                        <th class="numeric">Low</th>
+                                        <th class="numeric">Volume</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>AAC</td>
+                                        <td>AA COM. LTD.</td>
+                                        <td class="numeric">$1.38</td>
+                                        <td class="numeric">-0.01</td>
+                                        <td class="numeric">$1.39</td>
+                                        <td class="numeric">$1.38</td>
+                                        <td class="numeric">9,395</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AAD</td>
+                                        <td>ARDENT GRP</td>
+                                        <td class="numeric">$1.15</td>
+                                        <td class="numeric">+0.02</td>
+                                        <td class="numeric">$1.15</td>
+                                        <td class="numeric">$1.13</td>
+                                        <td class="numeric">56,431</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AAX</td>
+                                        <td>AUSENCO LTD</td>
+                                        <td class="numeric">$4.00</td>
+                                        <td class="numeric">-0.04</td>
+                                        <td class="numeric">$4.05</td>
+                                        <td class="numeric">$4.00</td>
+                                        <td class="numeric">90,641</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ABC</td>
+                                        <td>ADELAIDE LTD</td>
+                                        <td class="numeric">$3.00</td>
+                                        <td class="numeric">+0.06</td>
+                                        <td class="numeric">$3.00</td>
+                                        <td class="numeric">$2.96</td>
+                                        <td class="numeric">862,518</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ABP</td>
+                                        <td>ABACUS GRP</td>
+                                        <td class="numeric">$1.91</td>
+                                        <td class="numeric">0.00</td>
+                                        <td class="numeric">$1.93</td>
+                                        <td class="numeric">$1.90</td>
+                                        <td class="numeric">595,701</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ABY</td>
+                                        <td>ADITYA LTD</td>
+                                        <td class="numeric">$0.77</td>
+                                        <td class="numeric">+0.02</td>
+                                        <td class="numeric">$0.77</td>
+                                        <td class="numeric">$0.76</td>
+                                        <td class="numeric">54,567</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ACR</td>
+                                        <td>ACRUX LTD</td>
+                                        <td class="numeric">$3.71</td>
+                                        <td class="numeric">+0.01</td>
+                                        <td class="numeric">$3.72</td>
+                                        <td class="numeric">$3.68</td>
+                                        <td class="numeric">191,373</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ADU</td>
+                                        <td>ADAMUS LTD</td>
+                                        <td class="numeric">$0.72</td>
+                                        <td class="numeric">0.00</td>
+                                        <td class="numeric">$0.74</td>
+                                        <td class="numeric">$0.72</td>
+                                        <td class="numeric">8,602,291</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AGG</td>
+                                        <td>ANG LTD</td>
+                                        <td class="numeric">$7.81</td>
+                                        <td class="numeric">-0.22</td>
+                                        <td class="numeric">$7.82</td>
+                                        <td class="numeric">$7.81</td>
+                                        <td class="numeric">148</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AGK</td>
+                                        <td>AGL LTD</td>
+                                        <td class="numeric">$13.82</td>
+                                        <td class="numeric">+0.02</td>
+                                        <td class="numeric">$13.83</td>
+                                        <td class="numeric">$13.67</td>
+                                        <td class="numeric">846,403</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AGO</td>
+                                        <td>ATLAS LTD</td>
+                                        <td class="numeric">$3.17</td>
+                                        <td class="numeric">-0.02</td>
+                                        <td class="numeric">$3.22</td>
+                                        <td class="numeric">$3.10</td>
+                                        <td class="numeric">5,416,303</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- end of responsive tables-->
+                </div>
+                <!-- /.inner -->
+            </div>
+            <!-- /.outer -->
+            <!-- /#content -->
+
+        </div>
+    </div>
+    <!--wrapper-->
+    <div id="right">
+        <div class="right_content">
+            <div class="alert alert-success white_txt">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Welcome Micheal
+                    <br/></strong>
+                Set Your Skin Here. Checkout Admin Statistics. Good Day!.
+            </div>
+            <div class="well well-small dark">
+                <div class="xs_skin_hide hidden-sm-up toggle-right"> <i class="fa fa-cog"></i></div>
+                <h4 class="brown_txt">
+                    <span class="fa-stack fa-sm">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
+                </span>
+                    Skins
+                </h4>
+                <br/>
+
+                <div class="skinmulti_btn" onclick="javascript:loadjscssfile('blue_black_skin.html','css')">
+                    <div class="skin_blue skin_size"></div>
+                    <div class="skin_black skin_size"></div>
+                </div>
+                <div class="skinmulti_btn" onclick="javascript:loadjscssfile('green_black_skin.html','css')">
+                    <div class="skin_green skin_size"></div>
+                    <div class="skin_black skin_size"></div>
+                </div>
+                <div class="skinmulti_btn" onclick="javascript:loadjscssfile('purple_black_skin.html','css')">
+                    <div class="skin_purple skin_size"></div>
+                    <div class="skin_black skin_size"></div>
+                </div>
+                <div class="skinmulti_btn" onclick="javascript:loadjscssfile('orange_black_skin.html','css')">
+                    <div class="skin_orange skin_size"></div>
+                    <div class="skin_black skin_size"></div>
+                </div>
+                <div class="skinmulti_btn" onclick="javascript:loadjscssfile('red_black_skin.html','css')">
+                    <div class="skin_red skin_size"></div>
+                    <div class="skin_black skin_size"></div>
+                </div>
+                <div class="skinmulti_btn" onclick="javascript:loadjscssfile('mint_black_skin.html','css')">
+                    <div class="skin_mint skin_size"></div>
+                    <div class="skin_black skin_size"></div>
+                </div>
+                <div class="skinmulti_btn" onclick="javascript:loadjscssfile('brown_black_skin.html','css')">
+                    <div class="skin_brown skin_size"></div>
+                    <div class="skin_black skin_size"></div>
+                </div>
+                <div class="skinmulti_btn" onclick="javascript:loadjscssfile('black_skin.html','css')">
+                    <div class="skin_black skin_size"></div>
+                    <div class="skin_black skin_size"></div>
+                </div>
+                <div class="skin_btn skin_blue" onclick="javascript:loadjscssfile('blue_skin.html','css')"></div>
+                <div class="skin_btn skin_green" onclick="javascript:loadjscssfile('green_skin.html','css')"></div>
+                <div class="skin_btn skin_purple" onclick="javascript:loadjscssfile('purple_skin.html','css')"></div>
+                <div class="skin_btn skin_orange" onclick="javascript:loadjscssfile('orange_skin.html','css')"></div>
+                <div class="skin_btn skin_red" onclick="javascript:loadjscssfile('red_skin.html','css')"></div>
+                <div class="skin_btn skin_mint" onclick="javascript:loadjscssfile('mint_skin.html','css')"></div>
+                <div class="skin_btn skin_brown" onclick="javascript:loadjscssfile('brown_skin.html','css')"></div>
+                <div class="skin_btn skin_black" onclick="javascript:loadjscssfile('black_skin.html','css')"></div>
+
+            </div>
+            <div class="well well-small dark">
+                <h4 class="brown_txt margin15_bottom">
+                    <img src="img/admin.jpg" width="32" height="32" class="rounded-circle avatar-img" alt="avatar"> &nbsp;Admin
+                    Statistics</h4>
+                <br/>
+                <ul class="list-unstyled">
+                    <li class="green_txt margin15_bottom">
+                <span class="fa-stack fa-sm">
+                    <i class="fa fa-circle fa-stack-2x text-mint"></i>
+                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                </span>
+                        &nbsp; Last Login
+                        <span class="inlinesparkline float-xs-right">2hrs Back</span>
+                    </li>
+                    <li class="warning_txt margin15_bottom">
+                        <span class="fa-stack fa-sm">
+                      <i class="fa fa-circle fa-stack-2x text-brown"></i>
+                      <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                    </span>
+                        &nbsp; Pending Tasks
+                        <span class="dynamicsparkline float-xs-right">12</span>
+                    </li>
+                    <li class="primary_txt margin15_bottom">
+                        <span class="fa-stack fa-sm">
+                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                      <i class="fa fa-cloud fa-stack-1x fa-inverse"></i>
+                    </span>
+                        &nbsp; Weather Today
+                        <span class="dynamicbar float-xs-right">Rainy</span>
+                    </li>
+                    <li class="margin15_bottom">
+                        <span class="fa-stack fa-sm">
+                      <i class="fa fa-circle fa-stack-2x text-brown"></i>
+                      <i class="fa fa-calendar fa-stack-1x fa-inverse"></i>
+                    </span>
+                        &nbsp; Events
+                        <span class="inlinebar float-xs-right">Team Out</span>
+                    </li>
+                    <li class="success_txt margin15_bottom">
+                        <span class="fa-stack fa-sm">
+                      <i class="fa fa-circle fa-stack-2x text-success"></i>
+                      <i class="fa fa-bell fa-stack-1x fa-inverse"></i>
+                    </span>
+                        &nbsp; Notifications
+                        <span class="inlinebar float-xs-right">5</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="well well-small dark right_progressbar_section">
+                <h4 class="brown_txt">
+                    <span class="fa-stack fa-sm">
+                      <i class="fa fa-circle fa-stack-2x text-brown"></i>
+                      <i class="fa fa-hand-o-down fa-stack-1x fa-inverse"></i>
+                    </span>
+                    Alerts
+                </h4>
+                <br/>
+                <span>Sales Improvement</span>
+                <span class="float-xs-right">
+                <small>20%</small>
+            </span>
+                <div class="progress xs">
+                    <progress class="progress progress-striped progress-primary" value="20" max="100"></progress>
+                </div>
+                <span>Server Load</span>
+                <span class="float-xs-right">
+                <small>80%</small>
+            </span>
+                <div class="progress xs">
+                    <progress class="progress  progress-striped progress-mint" value="80" max="100"></progress>
+                </div>
+                <span>Traffic Improvement</span>
+                <span class="float-xs-right">
+                <small>55%</small>
+            </span>
+                <div class="progress xs">
+                    <progress class="progress  progress-striped progress-danger" value="55" max="100"></progress>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#wrap -->
+
+
+<!-- global scripts-->
+<script type="text/javascript" src="js/components.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+<!-- end of global scripts-->
+<!-- plugin scripts -->
+<script type="text/javascript" src="vendors/select2/js/select2.js"></script>
+<script type="text/javascript" src="vendors/datatables/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="vendors/datatables/js/dataTables.bootstrap.min.js"></script>
+<!-- end plugin scripts -->
+<!--Page level scripts-->
+<script type="text/javascript" src="js/pages/advanced_tables.js"></script>
+<!-- end of global scripts-->
+
+</body>
+
+<!-- Mirrored from demo.lorvent.com/admire1_fixed_menu_header/advanced_tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Jan 2017 00:13:09 GMT -->
+</html>
