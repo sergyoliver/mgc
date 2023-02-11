@@ -30,7 +30,7 @@
         <div class="col-sm-5 col-lg-6 skin_txt">
             <h4 class="nav_top_align">
                 <i class="fa fa-table"></i>
-              Liste des Adhérents 
+              Liste des Transactions 
             </h4>
         </div>
         <div class="col-sm-7 col-lg-6">
@@ -42,9 +42,9 @@
                     </a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="?page=ajoutadherent">Nouvel Adhérent</a>
+                    <a href="?page=ajoutadherent">Nouvelle Transactions</a>
                 </li>
-                <li class="active breadcrumb-item">Liste des Adhérents</li>
+                <li class="active breadcrumb-item">Liste des Transactions </li>
             </ol>
         </div>
     </div>
@@ -64,7 +64,7 @@
 
                         if (isset($_GET['id'])){
                             $id =$_GET['id'];
-                        $rsg = $bdd->prepare('select * from table_adherent  WHERE id_adhr    =:zid  ');
+                        $rsg = $bdd->prepare('select * from table_transaction  WHERE id_trans     =:zid  ');
                         $rsg->execute(array("zid"=>$_GET['id']));
                         $rowg = $rsg->fetch();
                         }
@@ -74,110 +74,104 @@
     try {
 
         //$dat = date("Y-m-d H:i:s");
-        $rsql1 = $bdd->prepare('UPDATE  table_adherent SET  nom_adh = :nom_adh,  penom_adh = :penom_adh,fonction_adh = :fonction_adh,photo_adr = :photo_adr,datenaiss_adh = :datenaiss_adh, tel_adh = :tel_adh,
-                            mail_adh = :mail_adh,  adresse_adh = :adresse_adh,idsec = :idsec,iddist = :iddist,idreg = :idreg,id_fed = :id_fed,datenrf = :datenrf,id_modif = :id_modif WHERE id_adhr  = :id ');
+        $rsql1 = $bdd->prepare('UPDATE  table_transaction SET  mtn_trans = :mtn_trans,  Date_trans = :Date_trans,num_paiem = :num_paiem,modep_trans = :modep_trans,motif_trans = :motif_trans, id_nomadr = :id_nomadr,
+                            daterenf = :daterenf,  id_modif = :id_modif WHERE id_trans  = :id ');
         //  print_r($rsql1);
-        $tab = $rsql1->execute(array('nom_adh' => $_POST['nom_adh'], 'penom_adh' => $_POST['penom_adh'], 'fonction_adh' => $_POST['fonction_adh'],'photo_adr' => $photor,'datenaiss_adh' => $_POST['datenaiss_adh'], 'tel_adh' => $_POST['tel_adh'],'mail_adh' => $_POST['mail_adh'],'adresse_adh' => $_POST['adresse_adh'],'idsec' => $_POST['secteur'],'iddist' => $_POST['district'],'idreg' => $_POST['region'],'id_fed' => $_POST['feder'],'datenrf' => gmdate("Y-m-d H:i:s"),'id_modif' => $_SESSION['id'], 'id' =>$id ));
+        $tab = $rsql1->execute(array('mtn_trans' => $_POST['mtn_trans'], 'Date_trans' => $_POST['Date_trans'], 'num_paiem' => $_POST['num_paiem'], 'modep_trans' => $_POST['modep_trans'],'motif_trans' => $_POST['actif'],'id_nomadr' => $_POST['id_nomadr'],'daterenf' => gmdate("Y-m-d H:i:s"),'id_modif' => $_SESSION['id'], 'id' =>$id ));
   } catch (Exception $e) {
         die("Erreur ! " . $e->getMessage());
     }
-    header("location:?page=listadherent");
+    header("location:?page=listtransaction");
 
     }                   
 
                         ?>
                          <form class="form-horizontal login_validator" id="form_inline_validator" action=""  method="post" enctype="multipart/form-data">
                              <br>
-                            <h4 style="margin-top: 5px; margin-bottom: 10px"> Modifier ADHÉRENT</h4>
+                            <h4 style="margin-top: 5px; margin-bottom: 10px"> AJOUT PAIEMENT </h4>
                             <hr>
                              <!--############################### -->
+                             <div class="row">
+                                 <div class="col-lg-12 input_field_sections">
+                                    <h4 style="text-align: center">Motif Paiement</h4>
+                                    <div class="col-lg-7 push-lg-3">
+                                        <label for="radio1" class="custom-control custom-radio signin_radio1">
+                                            <input id="radio1" name="actif" type="radio" class="custom-control-input" value="0" <?php if(isset($rowg['motif_trans']) && $rowg['motif_trans']=="0"){ echo "selected";} ?>>
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">DON</span>
+                                        </label>
+                                        <label for="radio4" class="custom-control custom-radio signin_radio4">
+                                            <input id="radio4" name="actif" type="radio" class="custom-control-input" value="1" <?php if(isset($rowg['motif_trans']) && $rowg['motif_trans']=="1"){ echo "selected";} ?>>
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">COTISATION</span>
+                                        </label>
+                                        <label for="radio2" class="custom-control custom-radio signin_radio2">
+                                            <input id="radio2" name="actif" type="radio" class="custom-control-input" value="2" <?php if(isset($rowg['motif_trans']) && $rowg['motif_trans']=="2"){ echo "selected";} ?>>
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">FRAIS ADHESION </span>
+                                        </label>
+                                    </div>
+                                </div>
+                             </div>
+                              <!--############################### -->
                             <div class="row">
                                 <div class="col-lg-6 input_field_sections">
-                                    <h5>District</h5>
+                                    <h5>ADHÉRENTS</h5>
                                     <div class="input-group">
-                                        <select class="form-control chzn-select" name="district">
+                                        <select class="form-control chzn-select" name="id_nomadr">
                                             <option value="-1" selected hidden>Selectionner </option>
                                             <?php
                                             $i=1;
-                                            $rscat = $bdd->prepare('select * from   table_district  ORDER by nomp DESC ');
+                                            $rscat = $bdd->prepare('select * from   table_adherent  ORDER by nom_adh DESC ');
                                             $rscat->execute();
                                             while($rowcat = $rscat->fetch()) {
                                                 ?>
-                                                <option value="<?php echo $rowcat['id'] ?>" <?php if(isset($rowg['iddist']) && $rowg['iddist']==$rowcat['id']){ echo "selected";} ?>><?php echo $rowcat['nomp'] ?></option>
+                                                <option value="<?php echo $rowcat['id_adhr'] ?>" <?php if(isset($rowg['id_nomadr']) && $rowg['id_nomadr']==$rowcat['id_adhr']){ echo "selected";} ?>><?php echo $rowcat['nom_adh'] ?></option>
 
                                             <?php }  ?>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 input_field_sections">
-                                    <h5>Région </h5>
-                                    <div class="input-group">
-                                        <select class="form-control chzn-select" name="region">
-                                            <option value="-1" selected hidden>Selectionner </option>
-                                            <?php
-                                            $i=1;
-                                            $rscat = $bdd->prepare('select * from   table_region  ORDER by nomr DESC ');
-                                            $rscat->execute();
-                                            while($rowcat = $rscat->fetch()) {
-                                                ?>
-                                                <option value="<?php echo $rowcat['idregion'] ?>" <?php if(isset($rowg['idreg']) && $rowg['idreg']==$rowcat['idregion']){ echo "selected";} ?>><?php echo $rowcat['nomr'] ?></option>
+                                <div class="col-md-6">
+                                            <div class="input-group">
+                                                <label><h5>
+                                                Mode de Paiement </h5></label>
+                                               <select id="idproprio" class="form-control chzn-select" name="modep_trans" >
+                                                <option value="-1">Selectionnez </option>
+                                                                      
 
-                                            <?php }  ?>
-                                        </select>
-                                    </div>
-                                </div>  
+                                                <option value="Wave" <?php if(isset($rowg['modep_trans']) && $rowg['modep_trans']=="Wave"){ echo "selected";} ?> >
+                                                    Wave
+                                                  </option>
+                                                  <option value="OM" <?php if(isset($rowg['modep_trans']) && $rowg['modep_trans']=="OM"){ echo "selected";} ?>>
+                                                    Orange Money
+                                                  </option>
+                                                 
+                                                          >
+                                      </select>
+
+                                         </div>
+                                       </div>
+                                  
                             </div>
                             <!--############################### -->
-                            <div class="row">
-                                <div class="col-lg-6 input_field_sections">
-                                    <h5>Féderation</h5>
-                                    <div class="input-group">
-                                        <select class="form-control chzn-select" name="feder">
-                                            <option value="-1" selected hidden>Selectionner </option>
-                                            <?php
-                                            $i=1;
-                                            $rscat = $bdd->prepare('select * from   table_federal  ORDER by nomf_f DESC ');
-                                            $rscat->execute();
-                                            while($rowcat = $rscat->fetch()) {
-                                                ?>
-                                                <option value="<?php echo $rowcat['id_fed'] ?>" <?php if(isset($rowg['id_fed']) && $rowg['id_fed']==$rowcat['id_fed']){ echo "selected";} ?>><?php echo $rowcat['nomf_f'] ?></option>
-
-                                            <?php }  ?>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 input_field_sections">
-                                    <h5>Secteur </h5>
-                                    <div class="input-group">
-                                        <select class="form-control chzn-select" name="secteur">
-                                            <option value="-1" selected hidden>Selectionner </option>
-                                            <?php
-                                            $i=1;
-                                            $rscat = $bdd->prepare('select * from   table_secteur  ORDER by noms DESC ');
-                                            $rscat->execute();
-                                            while($rowcat = $rscat->fetch()) {
-                                                ?>
-                                                <option value="<?php echo $rowcat['id_section'] ?>" <?php if(isset($rowg['idsec']) && $rowg['idsec']==$rowcat['id_section']){ echo "selected";} ?>><?php echo $rowcat['noms'] ?></option>
-
-                                            <?php }  ?>
-                                        </select>
-                                    </div>
-                                </div>  
-                            </div>
+                            
                             <!--############################### -->
                             <div class="row">    
                                 <div class="col-lg-6 input_field_sections">
-                                    <h5>Nom</h5>
+                                    <h5>
+                                        Montant
+                                    </h5>
                                     <div class="input-group">
-                                    <input type="text" class="form-control" name="nom_adh" value="<?php if(isset($rowg['nom_adh'])){ echo $rowg['nom_adh'] ;}  ?>">
+                                    <input type="text" class="form-control" name="mtn_trans" value="<?php if(isset($rowg['mtn_trans'])){ echo $rowg['mtn_trans'] ;}  ?>">
                                     <span class="input-group-addon"> <i class="fa fa-file text-primary"></i>
                                     </span>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 input_field_sections">
-                                    <h5>Prenom</h5>
+                                    <h5>Date Paiement</h5>
                                     <div class="input-group">
-                                    <input type="text" class="form-control" name="penom_adh" value="<?php if(isset($rowg['penom_adh'])){ echo $rowg['penom_adh'] ;}  ?>">
+                                    <input type="date" class="form-control" name="Date_trans" value="<?php if(isset($rowg['Date_trans'])){ echo $rowg['Date_trans'] ;}  ?>">
                                     <span class="input-group-addon"> <i class="fa fa-file text-primary"></i>
                                     </span>
                                     </div>
@@ -186,68 +180,19 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 input_field_sections">
-                                    <h5>Email</h5>
+                                    <h5>Numéro Paiement </h5>
                                     <div class="input-group">
-                                    <input type="text" class="form-control" name="mail_adh" value="<?php if(isset($rowg['mail_adh'])){ echo $rowg['mail_adh'] ;}  ?>">
+                                    <input type="text" class="form-control" name="num_paiem" value="<?php if(isset($rowg['num_paiem'])){ echo $rowg['num_paiem'] ;}  ?>">
                                     <span class="input-group-addon"> <i class="fa fa-file text-primary"></i>
                                     </span>
                                     </div>
                                 </div> 
-                                <div class="col-lg-6 input_field_sections">
-                                    <h5>Fonction</h5>
-                                    <div class="input-group">
-                                    <input type="text" class="form-control" name="fonction_adh" value="<?php if(isset($rowg['fonction_adh'])){ echo $rowg['fonction_adh'] ;}  ?>">
-                                    <span class="input-group-addon"> <i class="fa fa-file text-primary"></i>
-                                    </span>
-                                    </div>
-                                </div> 
+                                 
                                
                             </div>
-                            <div class="row">                                
-                               <div class="col-lg-6 input_field_sections">
-                                    <h5>Date Naissance </h5>
-                                    <div class="input-group">
-                                    <input type="text" class="form-control" id="datepicker-autoclose" placeholder="jj/mm/aaaa" name="datenaiss_adh" value="<?php if(isset($rowg['datenaiss_adh'])){ echo $rowg['datenaiss_adh'] ;}  ?>">
-                                    <span class="input-group-addon"> <i class="fa fa-file text-primary"></i>
-                                    </span>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-lg-6 input_field_sections">
-                                    <h5>Contact </h5>
-                                    <div class="input-group">
-                                    <input type="text" class="form-control" name="tel_adh" value="<?php if(isset($rowg['tel_adh'])){ echo $rowg['tel_adh'] ;}  ?>">
-                                    <span class="input-group-addon"> <i class="fa fa-file text-primary"></i>
-                                    </span>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <!-- ########################## -->
-                            <div class="row">                                
-                               <div class="col-lg-6 input_field_sections">
-                                    <h5>Adresse </h5>
-                                    <div class="input-group">
-                                    <input type="text" class="form-control" name="adresse_adh" value="<?php if(isset($rowg['adresse_adh'])){ echo $rowg['adresse_adh'] ;}  ?>">
-                                    <span class="input-group-addon"> <i class="fa fa-file text-primary"></i>
-                                    </span>
-                                    </div>
-                                </div>
-                                 <div class="col-lg-6 input_field_sections">
-                                    <h5>Ajouter une photo </h5>
-                                    <div class="input-group">
-                                        <div class="input-group">
-                                            <input id="input-4" name="photo_adr" type="file"  class="file-loading" style="display: block">
-
-                                        </div>
-                                    </div>
-                                </div> 
-                                
-                               
-                            </div>
-                            <!-- ########################### -->
-                             <div class="row"> 
-                               
-                            </div>
+                         
                             <!-- ########################### -->
                                   <br>
                                    <hr /><hr />
@@ -256,10 +201,10 @@
                                     <div class="col-lg-5 push-lg-2">
                                         <button class="btn btn-primary" type="submit" id="ok" name="ok">
                                             <i class="fa fa-user"></i>
-                                            Enregistrer
+                                            Modifier 
                                         </button>
                                          <button class="btn btn-warning" type="reset" id="clear">
-                                             <a  id="editable_table_new"  href="?page=listadherent" style="color :white;">
+                                             <a  id="editable_table_new"  href="?page=listtransaction" style="color :white;">
                                                         <i class="fa fa-refresh"></i>
                                                        Annuler
                                              </a>
